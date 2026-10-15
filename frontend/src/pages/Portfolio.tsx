@@ -319,8 +319,17 @@ function FleetCard({ s, i }: { s: SkillGroup; i: number }) {
 
 function Contact({ c, theme }: { c: Content; theme: Theme }) {
   const ct = c.contact;
-  const card = 'flex flex-col gap-1 break-words rounded-2xl border px-5 py-4 font-semibold no-underline backdrop-blur-md transition-all hover:-translate-y-0.5 border-white/70 bg-white/70 text-ink shadow-[0_18px_40px_-28px_rgba(13,27,54,.6)] hover:bg-white/90 dark:border-white/15 dark:bg-white/10 dark:text-white dark:shadow-none dark:hover:bg-white/15';
+  const card = 'contact-card group relative flex items-center gap-4 overflow-hidden break-words rounded-2xl border px-5 py-4 font-semibold no-underline backdrop-blur-md transition-all duration-300 hover:-translate-y-1 border-white/70 bg-white/70 text-ink shadow-[0_18px_40px_-28px_rgba(13,27,54,.6)] hover:bg-white/95 hover:shadow-[0_26px_50px_-24px_rgba(13,27,54,.55)] dark:border-white/15 dark:bg-white/10 dark:text-white dark:shadow-none dark:hover:bg-white/15';
   const label = 'label !text-tail dark:!text-amber';
+  const icon = (bg: string, path: React.ReactNode) => (
+    <span className={`grid h-11 w-11 flex-none place-items-center rounded-xl text-white shadow-md transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 ${bg}`} aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">{path}</svg>
+    </span>
+  );
+  const arrow = <span className="ml-auto text-lg opacity-0 transition-all duration-300 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100" aria-hidden="true">↗</span>;
+  const MAIL = <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.6-8-5.6zM5.6 7 12 11.5 18.4 7H5.6z" />;
+  const IN = <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11z" />;
+  const GH = <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z" />;
   return (
     <section id="atc" className="relative isolate min-h-[640px] overflow-hidden text-ink dark:text-white" aria-labelledby="atc-title">
       <div className="absolute inset-0 -z-10">
@@ -332,9 +341,9 @@ function Contact({ c, theme }: { c: Content; theme: Theme }) {
         <h2 data-reveal id="atc-title" className="font-display text-[clamp(52px,8.5vw,116px)] font-black uppercase">{ct.heading}</h2>
         <p data-reveal className="mt-6 max-w-[54ch] text-[19px] text-[#2c3e5c] dark:text-[#d4e0f0]">{ct.text}</p>
         <div data-reveal className="mt-9 grid gap-3.5 md:grid-cols-3">
-          {ct.email && <a href={`mailto:${ct.email}`} className={card}><span className={label}>Email</span>{ct.email}</a>}
-          {ct.linkedin_url && <ExtLink href={ct.linkedin_url} className={card}><span className={label}>LinkedIn</span>{ct.linkedin_label}</ExtLink>}
-          {ct.github_url && <ExtLink href={ct.github_url} className={card}><span className={label}>GitHub</span>{ct.github_label}</ExtLink>}
+          {ct.email && <a href={`mailto:${ct.email}`} className={card}>{icon('bg-gradient-to-br from-[#ea4335] to-[#c5221f]', MAIL)}<span className="min-w-0"><span className={label}>Email</span><span className="block break-all text-[15px] leading-snug">{ct.email}</span></span>{arrow}</a>}
+          {ct.linkedin_url && <ExtLink href={ct.linkedin_url} className={card}>{icon('bg-[#0a66c2]', IN)}<span className="min-w-0"><span className={label}>LinkedIn</span><span className="block truncate">{ct.linkedin_label}</span></span>{arrow}</ExtLink>}
+          {ct.github_url && <ExtLink href={ct.github_url} className={card}>{icon('bg-[#181717] dark:bg-white dark:!text-[#181717]', GH)}<span className="min-w-0"><span className={label}>GitHub</span><span className="block truncate">{ct.github_label}</span></span>{arrow}</ExtLink>}
         </div>
       </div>
     </section>
