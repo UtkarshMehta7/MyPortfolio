@@ -1,0 +1,20 @@
+{
+  "A380-800": {
+    "src": "/assets/fleet/A380-800.jpg"
+  },
+  "777-300ER": {
+    "src": "/assets/fleet/777-300ER.jpg"
+  },
+  "A350-1000": {
+    "src": "/assets/fleet/A350-1000.jpg"
+  },
+  "787-9": {
+    "src": "/assets/fleet/787-9.jpg"
+  },
+  "747-8": {
+    "src": "/assets/fleet/747-8.jpg"
+  },
+  "A321neo": {
+    "src": "/assets/fleet/A321neo.jpg"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "profile": {
+    "eyebrow": "Now boarding · Internships 2027",
+    "headline": "Cloud & software engineer, cleared for",
+    "headline_emphasis": "takeoff",
+    "lede": "I'm Utkarsh, a Computer Science (Cloud Computing) student at Lovely Professional University. I build full-stack and AI systems, keep Linux servers in line, and hold seven cloud certifications across AWS, Google Cloud and Oracle Cloud.",
+    "photo_url": "/assets/utkarsh.webp",
+    "from_code": "PGW",
+    "from_city": "Phagwara · LPU",
+    "to_code": "CLD",
+    "to_city": "The Cloud · Anywhere",
+    "passenger": "MEHTA / UTKARSH",
+    "flight": "UM 2028",
+    "gate": "AWS · GCP · OCI",
+    "seat": "B.Tech CSE",
+    "class_of": "2028",
+    "status": "Open to intern",
+    "boarding_group": "Cloud · Linux · Security"
+  },
+  "stats": [
+    {
+      "value": "7",
+      "label": "cloud certifications"
+    },
+    {
+      "value": "4",
+      "label": "projects in production"
+    },
+    {
+      "value": "8.45",
+      "label": "CGPA / 10"
+    }
+  ],
+  "projects": [
+    {
+      "date": "OCT 26",
+      "code": "LPU 404",
+      "board_name": "RESEARCH HUB",
+      "status": "BOARDING",
+      "stack": "React 19 · TypeScript · FastAPI · PostgreSQL",
+      "title": "LPU Research Intelligence & Collaboration Hub",
+      "description": "A full-stack platform that brings six modules into one system: researcher discovery, project management, publication tracking, patent records, funding opportunities and lab booking. Role-based access control and JWT authentication protect the REST API, with ML-based recommendations, automated testing and cloud deployment.",
+      "live_url": "https://lpu-research-hub.netlify.app/",
+      "source_url": "https://github.com/UtkarshMehta7/lpu-resource-hub"
+    },
+    {
+      "date": "JUN 26",
+      "code": "PQC 203",
+      "board_name": "QUANTUM-SAFE",
+      "status": "BOARDING",
+      "stack": "Python · Java · JavaScript · ML-KEM · ML-DSA",
+      "title": "Post-Quantum Cryptography Security Platform",
+      "description": "Research into quantum threats to today's public-key cryptography, built around the NIST standards ML-KEM (Kyber) and ML-DSA (Dilithium). An interactive platform covers quantum security, enterprise migration, HSMs, PKI and TLS integration, with RSA vs PQC demonstrations and quantum-attack simulations.",
+      "live_url": "https://pqcframe.netlify.app/",
+      "source_url": "https://github.com/UtkarshMehta7/Post-Quantum-Cryptography"
+    },
+    {
+      "date": "APR 26",
+      "code": "AIR 777",
+      "board_name": "AIRSYS",
+      "status": "BOARDING",
+      "stack": "Python · Flask · Scikit-learn · NLP",
+      "title": "AIRSYS: AI-Powered Airport Intelligence System",
+      "description": "Predicts crowd density, flight delays and operational risk with Random Forest models served through Flask REST APIs. Includes an intent-based NLP chatbot, live weather and aviation data, and radar analytics for monitoring several airports. Yes, the theme of this site is not a coincidence.",
+      "live_url": "https://airsys.netlify.app/",
+      "source_url": "https://github.com/UtkarshMehta7/AIRSYS"
+    },
+    {
+      "date": "FEB 26",
+      "code": "OS 101",
+      "board_name": "THREAD SIM",
+      "status": "BOARDING",
+      "stack": "Python · Flask · Chart.js",
+      "title": "OS Thread Mapping & Scheduling Simulator",
+      "description": "An interactive operating-systems simulator showing thread-mapping models with Round Robin CPU scheduling. It models context switching, kernel thread allocation, starvation and deadlock, and charts execution timelines and scheduling metrics.",
+      "live_url": "https://thread-simulator.netlify.app/",
+      "source_url": "https://github.com/UtkarshMehta7/Thread-Simulator"
+    }
+  ],
+  "logbook": [
+    {
+      "date_top": "JUN–JUL",
+      "date_bottom": "2026",
+      "type": "Internship · Ranchi, India",
+      "title": "Research Intern, CyberPeace Foundation",
+      "bullets": [
+        "Researched cybersecurity topics, emerging technologies and current security trends, completing every assigned research task.",
+        "Built and improved web interfaces with HTML, CSS, JavaScript and Python.",
+        "Wrote technical documentation and supported project deliverables across the team."
+      ],
+      "text": "",
+      "link_label": "",
+      "link_url": ""
+    },
+    {
+      "date_top": "JUN–JUL",
+      "date_bottom": "2026",
+      "type": "Type rating · Lovely Professional University",
+      "title": "RHCSA Summer Training: Red Hat RH124 & RH134",
+      "bullets": [
+        "Administered Red Hat Enterprise Linux: users and groups, file permissions, storage, networking and system services.",
+        "Troubleshot system configuration and ran routine maintenance in hands-on labs."
+      ],
+      "text": "",
+      "link_label": "Verify on Credly",
+      "link_url": "https://www.credly.com/badges/94c7d91b-f3f7-4463-b7dc-37e8dedad0a4/public_url"
+    },
+    {
+      "date_top": "2024–",
+      "date_bottom": "2028",
+      "type": "Flight school · Phagwara, Punjab",
+      "title": "B.Tech, Computer Science & Engineering (Cloud Computing)",
+      "bullets": [],
+      "text": "Lovely Professional University · CGPA 8.45 / 10 · Graduating July 2028",
+      "link_label": "",
+      "link_url": ""
+    }
+  ],
+  "certifications": [
+    {
+      "issuer": "Google Cloud",
+      "name": "Associate Cloud Engineer",
+      "date": "JUL 2026",
+      "color": "gcp",
+      "url": "https://www.credly.com/badges/632f4aea-ab76-44ba-a9a0-01ddda9870c3/public_url"
+    },
+    {
+      "issuer": "AWS",
+      "name": "Certified Cloud Practitioner",
+      "date": "JUL 2026",
+      "color": "aws",
+      "url": "https://www.credly.com/badges/039d1587-ad4f-4f66-b7f6-e42494635e35/public_url"
+    },
+    {
+      "issuer": "AWS",
+      "name": "Certified AI Practitioner",
+      "date": "JUL 2026",
+      "color": "aws",
+      "url": "https://www.credly.com/badges/ea1bee4f-1ec1-424b-a163-4c94f27c88ce/public_url"
+    },
+    {
+      "issuer": "Oracle",
+      "name": "APEX Cloud Developer Certified Professional",
+      "date": "MAY 2025",
+      "color": "oci",
+      "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=6C8C6B10D9EA6DE810E30EB4F9FF856F11FCAF9D2557725CB06138EA05DEFEEC"
+    },
+    {
+      "issuer": "Oracle",
+      "name": "Fusion Cloud Applications Foundations Associate",
+      "date": "MAY 2025",
+      "color": "oci",
+      "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C392E08FDCA3D7CCE5C4B88E4F43CD0169E98E71C672472E295BBD39EDD1BCEE"
+    },
+    {
+      "issuer": "Oracle",
+      "name": "Cloud Data Foundations Associate",
+      "date": "NOV 2024",
+      "color": "oci",
+      "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=28724D8F0F07256858BAC244761DF56F7D1AE5AD27CD001AD330E5F1BF820DA7"
+    },
+    {
+      "issuer": "Oracle",
+      "name": "Cloud Infrastructure Foundations Associate",
+      "date": "OCT 2024",
+      "color": "oci",
+      "url": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=28724D8F0F07256858BAC244761DF56FA691191D2092469E463925A6D0B5A9DC"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "items": "Python · Java · C++ · SQL · JavaScript · TypeScript",
+      "aircraft": "777-300ER"
+    },
+    {
+      "title": "Cloud & DevOps",
+      "items": "AWS · Google Cloud · Oracle Cloud (OCI) · Oracle APEX · Docker · Kubernetes · CI/CD · Netlify · Render",
+      "aircraft": "A380-800"
+    },
+    {
+      "title": "Web & APIs",
+      "items": "React · Node.js · FastAPI · Flask · REST APIs · JWT auth · HTML5 · CSS3 · Chart.js",
+      "aircraft": "A350-1000"
+    },
+    {
+      "title": "Systems & Security",
+      "items": "Linux administration (RHEL) · Networking · Post-quantum cryptography · PKI · TLS · RBAC",
+      "aircraft": "787-9"
+    },
+    {
+      "title": "Data & AI",
+      "items": "PostgreSQL · Scikit-learn · Random Forest · NLP",
+      "aircraft": "747-8"
+    },
+    {
+      "title": "Core CS",
+      "items": "Data structures & algorithms · OOP · Operating systems · DBMS · Computer networks · Git",
+      "aircraft": "A321neo"
+    }
+  ],
+  "contact": {
+    "heading": "Request clearance.",
+    "text": "Looking for internships from January 2027 in cloud, DevOps, backend or security, remote or on-site. If your team has a seat, I'd like to hear from you.",
+    "email": "utkarsh9269771@gmail.com",
+    "linkedin_url": "https://www.linkedin.com/in/utkarshmehta0709",
+    "linkedin_label": "in/utkarshmehta0709",
+    "github_url": "https://github.com/UtkarshMehta7",
+    "github_label": "UtkarshMehta7"
+  }
+}

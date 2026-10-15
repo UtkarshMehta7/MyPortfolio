@@ -1,0 +1,29 @@
+name: Keep API awake
+
+# Render's free plan sleeps after 15 minutes without traffic. A light ping every 10 minutes
+# keeps /admin fast. It only hits /api/health, which doesn't touch the database,
+# so Neon's free compute hours aren't used up.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping Render health check
+        env:
+          RENDER_URL: ${{ vars.RENDER_URL }}
+        run: |
+          if [ -z "$RENDER_URL" ]; then
+            echo "Set the RENDER_URL repository variable (Settings → Secrets and variables → Actions → Variables)."
+            exit 0
+          fi
+          for i in 1 2 3; do
+            if curl -fsS --max-time 60 "${RENDER_URL%/}/api/health"; then exit 0; fi
+            sleep 15
+          done
+          echo "API did not answer after 3 tries"
+          exit 1

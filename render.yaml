@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: terminal-utkarsh-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DATABASE_URL          # Neon connection string (pooled), set in the Render dashboard
+        sync: false
+      - key: ADMIN_USERNAME        # initial login username; change it later in /admin → Account
+        sync: false
+      - key: ADMIN_PASSWORD_HASH   # bcrypt hash of the initial password (scripts/hash_password.py)
+        sync: false
+      - key: ADMIN_RESET           # set to "true" once to restore the login above if you're locked out
+        value: "false"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS       # your Netlify URL(s), comma separated
+        sync: false
+      - key: NETLIFY_BUILD_HOOK    # Netlify build hook URL; rebuilds the public site after every save
+        sync: false
+      - key: GITHUB_TOKEN          # optional, raises the GitHub API rate limit
+        sync: false
