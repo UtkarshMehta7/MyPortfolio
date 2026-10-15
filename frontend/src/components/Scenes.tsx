@@ -58,10 +58,12 @@ export function GateScene() {
         </div>
         <div className="glass-sheen absolute inset-0" />
       </div>
-      {/* a coffee on the window ledge */}
+      {/* the counter ledge by the window, with a coffee on it */}
+      <div className="ledge" />
       <div className="coffee">
         <span className="steam" /><span className="steam steam--2" /><span className="steam steam--3" />
-        <img src="/assets/scene/coffee.webp" alt="" className="relative block w-full dark:brightness-[.55] dark:saturate-[.8]" />
+        <span className="cup-shadow" />
+        <img src="/assets/scene/coffee.webp" alt="" className="relative block w-full dark:brightness-[.62] dark:saturate-[.85]" />
       </div>
     </div>
   );

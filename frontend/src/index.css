@@ -212,7 +212,11 @@ body::after {
 /* gate scene */
 .gate-jet { position: absolute; left: 0; top: 0; width: 26%; opacity: 0; }
 .landing-light { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 9999px; background: radial-gradient(circle, #fffbe8 0 25%, rgba(255,246,214,.5) 45%, rgba(255,246,214,0) 70%); }
-.coffee { position: absolute; right: -2%; bottom: -4%; width: clamp(150px, 19vw, 300px); filter: drop-shadow(0 22px 26px rgba(0,0,0,.35)); }
+.ledge { position: absolute; inset: auto 0 0 0; height: clamp(46px, 8%, 90px);
+  background: linear-gradient(to bottom, #d9d3c8 0, #b9b0a2 3px, #8f8577 40%, #6d6457); box-shadow: 0 -10px 30px rgba(0,0,0,.22); }
+.dark .ledge { background: linear-gradient(to bottom, #3a3f4a 0, #262a33 3px, #171a21 45%, #0d0f14); box-shadow: 0 -10px 30px rgba(0,0,0,.5); }
+.coffee { position: absolute; right: 4%; bottom: clamp(18px, 3.2%, 40px); width: clamp(130px, 15vw, 240px); filter: blur(.4px) drop-shadow(0 6px 10px rgba(0,0,0,.28)); }
+.cup-shadow { position: absolute; left: 4%; right: 4%; bottom: -4%; height: 16%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.45), rgba(0,0,0,0)); }
 .steam { position: absolute; left: 34%; top: -38%; width: 16%; height: 60%; border-radius: 50%; opacity: 0;
   background: radial-gradient(ellipse at 50% 70%, rgba(255,255,255,.55), rgba(255,255,255,0) 70%); filter: blur(7px); }
 .steam--2 { left: 46%; } .steam--3 { left: 40%; width: 12%; }
