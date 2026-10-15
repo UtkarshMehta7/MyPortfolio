@@ -32,7 +32,7 @@ const NAV = [
   ['#departures', 'Departures'],
   ['#logbook', 'Logbook'],
   ['#ratings', 'Ratings'],
-  ['#fleet', 'Fleet'],
+  ['#fleet', 'Skill fleet'],
   ['#atc', 'Contact'],
 ] as const;
 
@@ -257,8 +257,8 @@ function Stamp({ x, i }: { x: Certification; i: number }) {
 type Photo = { src: string };
 // Each aircraft is photographed in a scene that mirrors its skill group.
 const SCENE_NOTE: Record<string, string> = {
-  '777-300ER': 'Sunrise departure · first words in code',
-  'A380-800': 'Cruising above the clouds',
+  'A380-800': 'Sunrise departure · first words in code',
+  '777-300ER': 'Cruising above the clouds',
   'A350-1000': 'Blue hour over a connected city',
   '787-9': 'Night watch under a full moon',
   '747-8': 'Leaving a long data trail',
@@ -380,7 +380,7 @@ export default function Portfolio() {
         <section id="fleet" className="section-pad relative overflow-hidden bg-gradient-to-b from-[#cfe1f5] via-sky-mist to-paper dark:from-ink-deep dark:via-ink dark:to-ink-2" aria-labelledby="fleet-title">
           <div className="relative mx-auto max-w-wrap">
             <p data-reveal className="eyebrow">Section 04</p>
-            <h2 data-reveal id="fleet-title" className="h-section text-ink dark:text-white">The fleet</h2>
+            <h2 data-reveal id="fleet-title" className="h-section text-ink dark:text-white">The skill fleet</h2>
             <p data-reveal className="mb-10 mt-3.5 max-w-[60ch] text-muted dark:text-steel">Every skill group flies as its own aircraft, fuelled and cleared for departure.</p>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {c.skills.map((s, i) => (
