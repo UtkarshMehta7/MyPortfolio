@@ -255,6 +255,15 @@ function Stamp({ x, i }: { x: Certification; i: number }) {
 }
 
 type Photo = { src: string };
+// Each aircraft is photographed in a scene that mirrors its skill group.
+const SCENE_NOTE: Record<string, string> = {
+  'A380-800': 'Sunrise departure · where it all starts',
+  '777-300ER': 'Cruising above the clouds',
+  'A350-1000': 'Blue hour over a connected city',
+  '787-9': 'Night watch across the full moon',
+  '747-8': 'Leaving a long data trail',
+  'A321neo': 'First light, solid fundamentals',
+};
 const PHOTOS = FLEET_PHOTOS as Record<string, Photo>;
 
 // A real photo of the type (stored in the repo), bled to the card edges and faded into it; drawing as a fallback.
@@ -273,6 +282,9 @@ function FleetPhoto({ model, override }: { model: string; override?: string }) {
       <img src={photo.src} alt={`${fleetSpec(model).name} in flight`} loading="lazy" decoding="async" onError={() => setFailed(true)}
         className="kenburns aspect-[16/10] w-full object-cover" />
       <span className="sweep" aria-hidden="true" />
+      {SCENE_NOTE[model] && !override && (
+        <span className="absolute bottom-[22%] left-5 font-mono text-[10.5px] uppercase tracking-[.16em] text-white/90 [text-shadow:0_1px_8px_rgba(0,0,0,.6)]">{SCENE_NOTE[model]}</span>
+      )}
     </div>
   );
 }
